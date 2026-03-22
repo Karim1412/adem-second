@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الفيديو الصامت والتعبير الشفهي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="loader-container" id="loader">
+        <div class="loader"></div>
+        <p>جاري التحميل...</p>
+    </div>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <h1 class="logo"><i class="fas fa-video"></i> عبّر</h1>
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#intro">المقدمة</a></li>
+                <li><a href="#theory">الإطار النظري</a></li>
+                <li><a href="#methodology">المنهجية</a></li>
+                <li><a href="#results">النتائج</a></li>
+                <li><a href="#video-section">تفاعل</a></li>
+                <li><a href="#survey">استبيان</a></li>
+            </ul>
+            <button id="dark-mode-toggle" class="btn-icon">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+            <h1>فاعلية استخدام الفيديو الصامت</h1>
+            <h2>في تنمية مهارات التعبير الشفهي لدى تلاميذ السنة الأولى</h2>
+            <p>نهج مبتكر لتحفيز الخيال وتشجيع الأطفال على التحدث بثقة وتلقائية.</p>
+            <a href="#intro" class="btn-primary">اكتشف المزيد <i class="fas fa-arrow-down"></i></a>
+        </div>
+    </header>
+
+    <section id="intro" class="section reveal">
+        <div class="container">
+            <h2 class="section-title">مقدمة البحث</h2>
+            <div class="intro-grid">
+                <div class="intro-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>أهمية التعبير الشفهي</h3>
+                    <p>يعتبر التعبير الشفهي الأداة الأولى للتواصل والتفكير، وهو حجر الأساس في بناء شخصية التلميذ وصقل مهاراته الاجتماعية.</p>
+                </div>
+                <div class="intro-card">
+                    <i class="fas fa-film"></i>
+                    <h3>دور الفيديو الصامت</h3>
+                    <p>إزالة الصوت من المشاهد التعليمية يخلق فجوة معرفية تدفع التلميذ لمحاولة ملئها من خلال التخيل والتعبير عن الأحداث بلغته الخاصة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="objectives" class="section bg-light reveal">
+        <div class="container">
+            <h2 class="section-title">أهداف الدراسة</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>تحفيز الخيال</h3>
+                    <p>إطلاق العنان لمخيلة الطفل لتوقع وتفسير الأحداث.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-microphone"></i></div>
+                    <h3>تنمية الثقة</h3>
+                    <p>تشجيع التلميذ على التحدث أمام زملائه دون خوف من الخطأ.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-book-open"></i></div>
+                    <h3>إثراء الرصيد اللغوي</h3>
+                    <p>اكتساب مفردات وتراكيب جديدة من خلال المناقشة الموجهة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="theory" class="section reveal">
+        <div class="container">
+            <h2 class="section-title">الإطار النظري</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>ما هو التعبير الشفهي؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-body">
+                        <p>هو قدرة الفرد على ترجمة أفكاره ومشاعره إلى كلمات وجمل منطوقة ومفهومة للآخرين، مع مراعاة النطق السليم وتسلسل الأفكار.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>لماذا الفيديو الصامت تحديداً؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-body">
+                        <p>لأن الصورة المتحركة تجذب انتباه الطفل، وغياب الصوت يجعله هو "المعلق" على الأحداث، مما ينقله من دور المتلقي السلبي إلى المتفاعل الإيجابي.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>كيف يتم التقييم؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-body">
+                        <p>يتم التقييم من خلال ملاحظة طلاقة التلميذ، صحة التراكيب اللغوية، مدى ملاءمة المفردات للمشهد، وقدرته على التواصل البصري.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="methodology" class="section bg-light reveal">
+        <div class="container">
+            <h2 class="section-title">المنهجية المتبعة</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>1. العينة</h3>
+                        <p>تم تطبيق الدراسة على مجموعة من تلاميذ السنة الأولى ابتدائي، لضمان مناسبة الاستراتيجية لخصائصهم العمرية.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2. الأدوات</h3>
+                        <p>تم استخدام مقاطع فيديو قصيرة (1-2 دقيقة)، صامتة، تصور مواقف من الحياة اليومية المألوفة للطفل.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>3. طريقة التطبيق</h3>
+                        <p>عرض الفيديو أولاً، ثم طرح أسئلة موجهة، تليها محاولات التلاميذ لسرد القصة، وأخيراً التغذية الراجعة.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="results" class="section reveal">
+        <div class="container">
+            <h2 class="section-title">نتائج الدراسة</h2>
+            <div class="progress-container">
+                <div class="progress-box">
+                    <h4>الطلاقة اللفظية</h4>
+                    <div class="progress-bar-bg">
+                        <div class="progress-fill" data-width="85%">85%</div>
+                    </div>
+                </div>
+                <div class="progress-box">
+                    <h4>التفاعل الصفي</h4>
+                    <div class="progress-bar-bg">
+                        <div class="progress-fill" data-width="92%">92%</div>
+                    </div>
+                </div>
+                <div class="progress-box">
+                    <h4>الثقة بالنفس</h4>
+                    <div class="progress-bar-bg">
+                        <div class="progress-fill" data-width="78%">78%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="video-section" class="section bg-light reveal">
+        <div class="container">
+            <h2 class="section-title">لنجرب معاً! (الروتين اليومي)</h2>
+            <p class="text-center mb-2">شاهد الفيديو الصامت بتركيز، ثم أجب عن الأسئلة.</p>
+            
+            <div class="video-wrapper">
+                <video id="silentVideo" muted loop>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    متصفحك لا يدعم تشغيل الفيديو.
+                </video>
+                <div class="video-controls">
+                    <button id="playPauseBtn" class="btn-primary"><i class="fas fa-play"></i> تشغيل / إيقاف</button>
+                </div>
+            </div>
+
+            <div class="guiding-questions">
+                <h3><i class="fas fa-question-circle"></i> أسئلة توجيهية:</h3>
+                <ul>
+                    <li>ماذا ترى في الفيديو؟</li>
+                    <li>ماذا يفعل الشخصية؟</li>
+                    <li>إلى أين ذهب؟</li>
+                    <li>بمن التقى في طريقه؟</li>
+                </ul>
+                <button class="btn-secondary mt-1" id="express-btn">حاول أن تعبّر عمّا شاهدت!</button>
+                <div id="express-message" class="hidden-message">رائع! ابدأ بوصف المشهد الأول بصوت عالٍ...</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section reveal">
+        <div class="container">
+            <h2 class="section-title">معرض الصور</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=500&q=80" alt="أطفال في الفصل">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=500&q=80" alt="تلميذ يتحدث">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=500&q=80" alt="معلمة مع التلاميذ">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="survey" class="section bg-light reveal">
+        <div class="container">
+            <h2 class="section-title">شاركنا رأيك</h2>
+            <div class="form-container">
+                <form id="evaluationForm">
+                    <div class="form-group">
+                        <label for="name">الاسم:</label>
+                        <input type="text" id="name" placeholder="أدخل اسمك الكريم">
+                        <span class="error" id="nameError">الرجاء إدخال الاسم</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني:</label>
+                        <input type="email" id="email" placeholder="example@email.com">
+                        <span class="error" id="emailError">الرجاء إدخال بريد إلكتروني صحيح</span>
+                    </div>
+
+                    <div class="form-group radio-group">
+                        <label>هل تعتقد أن الفيديو الصامت مفيد؟</label>
+                        <div>
+                            <input type="radio" id="yes" name="useful" value="نعم" checked>
+                            <label for="yes">نعم</label>
+                            <input type="radio" id="no" name="useful" value="لا">
+                            <label for="no">لا</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>تقييمك للتجربة:</label>
+                        <div class="stars" id="star-rating">
+                            <i class="fas fa-star" data-value="1"></i>
+                            <i class="fas fa-star" data-value="2"></i>
+                            <i class="fas fa-star" data-value="3"></i>
+                            <i class="fas fa-star" data-value="4"></i>
+                            <i class="fas fa-star" data-value="5"></i>
+                        </div>
+                        <input type="hidden" id="ratingValue" value="5">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">ملاحظات إضافية:</label>
+                        <textarea id="notes" rows="4" placeholder="اكتب ملاحظاتك هنا..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary w-100">إرسال التقييم</button>
+                    <div id="formSuccess" class="success-message">تم إرسال تقييمك بنجاح! شكراً لمشاركتك.</div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="teacher" class="section reveal">
+        <div class="container text-center">
+            <h2 class="section-title">عن الباحثة / المعلمة</h2>
+            <div class="teacher-profile">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="صورة المعلمة" class="teacher-img">
+                <h3>أ. فاطمة الزهراء</h3>
+                <p>معلمة لغة عربية مهتمة بتطوير استراتيجيات التعلم النشط وتوظيف التكنولوجيا في تنمية مهارات التواصل لدى الأطفال في المراحل العمرية المبكرة.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container footer-content">
+            <div>
+                <h3>تواصل معنا</h3>
+                <p><i class="fas fa-envelope"></i> info@education-project.com</p>
+                <p><i class="fas fa-phone"></i> +216 12 345 678</p>
+            </div>
+            <div>
+                <h3>روابط سريعة</h3>
+                <ul class="footer-links">
+                    <li><a href="#theory">الإطار النظري</a></li>
+                    <li><a href="#methodology">المنهجية</a></li>
+                    <li><a href="#video-section">جرب بنفسك</a></li>
+                </ul>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة &copy; 2026 - مشروع الفيديو الصامت التعليمي.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
