@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const darkModeBtn = document.getElementById('dark-mode-toggle');
     const body = document.body;
     
-    // التحقق من الإعدادات السابقة
     if (localStorage.getItem('darkMode') === 'enabled') {
         body.classList.add('dark-mode');
         darkModeBtn.innerHTML = '<i class="fas fa-sun"></i>';
@@ -28,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 3. القائمة الجانبية للموبايل
+    // 3. القائمة الجانبية
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     
@@ -36,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.toggle('active');
     });
 
-    // 4. الرسوم المتحركة عند التمرير (Scroll Reveal) وتعبئة شريط التقدم
+    // 4. Scroll Reveal
     const reveals = document.querySelectorAll('.reveal');
     const progressFills = document.querySelectorAll('.progress-fill');
 
@@ -51,9 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // تشغيل الرسوم المتحركة لشريط التقدم عند الوصول لقسم النتائج
         const resultsSection = document.getElementById('results');
-        if(resultsSection.getBoundingClientRect().top < windowHeight - revealPoint) {
+        if (resultsSection && resultsSection.getBoundingClientRect().top < windowHeight - revealPoint) {
             progressFills.forEach(bar => {
                 const width = bar.getAttribute('data-width');
                 bar.style.width = width;
@@ -62,9 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll(); // تشغيل أولي
+    revealOnScroll();
 
-    // 5. الأكورديون (الإطار النظري)
+    // 5. Accordion
     const accordionHeaders = document.querySelectorAll('.accordion-header');
     
     accordionHeaders.forEach(header => {
@@ -72,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const body = header.nextElementSibling;
             const isActive = header.classList.contains('active');
             
-            // إغلاق كل الأقسام الأخرى
             document.querySelectorAll('.accordion-body').forEach(el => el.style.maxHeight = null);
             document.querySelectorAll('.accordion-header').forEach(el => el.classList.remove('active'));
 
@@ -83,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 6. التحكم في الفيديو الصامت التفاعلي
+    // 6. Video controls
     const video = document.getElementById('silentVideo');
     const playPauseBtn = document.getElementById('playPauseBtn');
     const expressBtn = document.getElementById('express-btn');
@@ -108,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 5000);
     });
 
-    // 7. تقييم النجوم
+    // 7. ⭐ Star rating
     const stars = document.querySelectorAll('.stars i');
     const ratingInput = document.getElementById('ratingValue');
 
@@ -118,28 +115,27 @@ document.addEventListener('DOMContentLoaded', () => {
             ratingInput.value = value;
             
             stars.forEach(s => s.classList.remove('active'));
-            for(let i = 0; i < value; i++) {
+            for (let i = 0; i < value; i++) {
                 stars[i].classList.add('active');
             }
         });
     });
 
-    // تحديد 5 نجوم كقيمة افتراضية
-    for(let i=0; i<5; i++) {
+    // default 5 stars
+    for (let i = 0; i < 5; i++) {
         stars[i].classList.add('active');
     }
 
-    // 8. التحقق من صحة الاستبيان (Form Validation)
+    // 8. ✅ FIXED Form Validation + Submission
     const form = document.getElementById('evaluationForm');
     
     form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
         let isValid = true;
+
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
-        
-        // التحقق من الاسم
+
+        // name validation
         if (name === '') {
             document.getElementById('nameError').style.display = 'block';
             isValid = false;
@@ -147,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('nameError').style.display = 'none';
         }
 
-        // التحقق من الإيميل
+        // email validation
         const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
         if (!email.match(emailPattern)) {
             document.getElementById('emailError').style.display = 'block';
@@ -156,16 +152,25 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('emailError').style.display = 'none';
         }
 
-        if (isValid) {
+        // ❌ block only if invalid
+        if (!isValid) {
+            e.preventDefault();
+            return;
+        }
+
+        // ✅ allow submission to Google Forms
+        setTimeout(() => {
             document.getElementById('formSuccess').style.display = 'block';
             form.reset();
-            // إعادة تعيين النجوم
+
+            // reset stars
             stars.forEach(s => s.classList.add('active'));
             ratingInput.value = 5;
-            
+
             setTimeout(() => {
                 document.getElementById('formSuccess').style.display = 'none';
             }, 5000);
-        }
+        }, 500);
     });
+
 });
