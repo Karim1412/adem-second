@@ -223,59 +223,67 @@
         </div>
     </section>
 
-    <section id="survey" class="section bg-light reveal">
-        <div class="container">
-            <h2 class="section-title">شاركنا رأيك</h2>
-            <div class="form-container">
-                <form id="evaluationForm" 
-                action="https://docs.google.com/forms/d/e/1FAIpQLSfCNbNi6XsZoDpdyk5yzOHwFyQj-SjBQCz616yoXfWNX8v95A/viewform?usp=dialog" 
+<section id="survey" class="section bg-light reveal">
+    <div class="container">
+        <h2 class="section-title">شاركنا رأيك</h2>
+        <div class="form-container">
+
+            <!-- Hidden iframe to prevent redirect -->
+            <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+            <form id="evaluationForm" 
+                action="https://docs.google.com/forms/d/e/1FAIpQLSfCNbNi6XsZoDpdyk5yzOHwFyQj-SjBQCz616yoXfWNX8v95A/formResponse" 
                 method="POST" 
                 target="hidden_iframe">
-                    <div class="form-group">
-                        <label for="name">الاسم:</label>
-                        <input type="text" id="name" placeholder="أدخل اسمك الكريم">
-                        <span class="error" id="nameError">الرجاء إدخال الاسم</span>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">البريد الإلكتروني:</label>
-                        <input type="email" id="email" placeholder="example@email.com">
-                        <span class="error" id="emailError">الرجاء إدخال بريد إلكتروني صحيح</span>
-                    </div>
 
-                    <div class="form-group radio-group">
-                        <label>هل تعتقد أن الفيديو الصامت مفيد؟</label>
-                        <div>
-                            <input type="radio" id="yes" name="useful" value="نعم" checked>
-                            <label for="yes">نعم</label>
-                            <input type="radio" id="no" name="useful" value="لا">
-                            <label for="no">لا</label>
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <label>الاسم:</label>
+                    <input type="text" name="entry.1633920210" id="name" placeholder="أدخل اسمك الكريم">
+                    <span class="error" id="nameError">الرجاء إدخال الاسم</span>
+                </div>
+                
+                <div class="form-group">
+                    <label>البريد الإلكتروني:</label>
+                    <input type="email" name="entry.227649005" id="email" placeholder="example@email.com">
+                    <span class="error" id="emailError">الرجاء إدخال بريد إلكتروني صحيح</span>
+                </div>
 
-                    <div class="form-group">
-                        <label>تقييمك للتجربة:</label>
-                        <div class="stars" id="star-rating">
-                            <i class="fas fa-star" data-value="1"></i>
-                            <i class="fas fa-star" data-value="2"></i>
-                            <i class="fas fa-star" data-value="3"></i>
-                            <i class="fas fa-star" data-value="4"></i>
-                            <i class="fas fa-star" data-value="5"></i>
-                        </div>
-                        <input type="hidden" id="ratingValue" value="5">
+                <div class="form-group radio-group">
+                    <label>هل تعتقد أن الفيديو الصامت مفيد؟</label>
+                    <div>
+                        <input type="radio" name="entry.790080973" value="نعم" checked>
+                        <label>نعم</label>
+                        
+                        <input type="radio" name="entry.790080973" value="لا">
+                        <label>لا</label>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label for="notes">ملاحظات إضافية:</label>
-                        <textarea id="notes" rows="4" placeholder="اكتب ملاحظاتك هنا..."></textarea>
+                <div class="form-group">
+                    <label>تقييمك للتجربة:</label>
+                    <div class="stars" id="star-rating">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="fas fa-star" data-value="4"></i>
+                        <i class="fas fa-star" data-value="5"></i>
                     </div>
+                    <input type="hidden" name="entry.1770822543" id="ratingValue" value="5">
+                </div>
 
-                    <button type="submit" class="btn-primary w-100">إرسال التقييم</button>
-                    <div id="formSuccess" class="success-message">تم إرسال تقييمك بنجاح! شكراً لمشاركتك.</div>
-                </form>
-            </div>
+                <div class="form-group">
+                    <label>ملاحظات إضافية:</label>
+                    <textarea name="entry.1846923513" id="notes" rows="4" placeholder="اكتب ملاحظاتك هنا..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary w-100">إرسال التقييم</button>
+                <div id="formSuccess" class="success-message">
+                    تم إرسال تقييمك بنجاح! شكراً لمشاركتك.
+                </div>
+            </form>
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="teacher" class="section reveal">
         <div class="container text-center">
